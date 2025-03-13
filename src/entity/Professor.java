@@ -18,4 +18,9 @@ public class Professor extends Usuario{
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s - Salário: %.2f", super.toString(), salario);
+    }
 }
