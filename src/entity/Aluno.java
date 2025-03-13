@@ -1,34 +1,26 @@
 package entity;
 
 public class Aluno extends Usuario{
-    private String nome;
-    private String matricula;
+    private String turma;
 
     public Aluno() {
     }
 
-    public Aluno(String nome, String matricula) {
-        this.nome = nome;
-        this.matricula = matricula;
+    public Aluno(String nome, String matricula, String login, String senha, String turma) {
+        super(nome, matricula, login, senha);
+        this.turma = turma;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTurma() {
+        return turma;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTurma(String turma) {
+        this.turma = turma;
     }
 
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public String exibirDetalhes(){
-        return String.format("Nome do entity.Aluno: %s\nMatrícula do entity.Aluno: %s", nome, matricula);
+    @Override
+    public String toString() {
+        return String.format("%s - Turma: %s", super.toString(), turma);
     }
 }
