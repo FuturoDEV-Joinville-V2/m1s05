@@ -1,6 +1,6 @@
 package entity;
 
-public class Usuario {
+public abstract class Usuario {
     private String nome;
     private String matricula;
     private String login;
